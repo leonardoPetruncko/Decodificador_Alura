@@ -24,7 +24,6 @@ function btnDecriptar() {
     }
 }
 
-
 function btnCopiar() {
     const textoCopiado = document.getElementById("texto-saida");
     if (textoCopiado.value == "") {
@@ -36,4 +35,38 @@ function btnCopiar() {
         ocultaMensagem();
         textoSaida.value = "";
     }
+}
+
+function encriptar(stringEncriptada) {
+
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
+
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptada.includes(matrizCodigo[i][0])) {
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+        }
+    }
+    return stringEncriptada;
+}
+
+function decriptar(stringEncriptada) {
+
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
+
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptada.includes(matrizCodigo[i][1])) {
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+        }
+    }
+    return stringEncriptada;
+}
+
+function mostraMensagem() {
+    campoMensagem.style.display = "block";
+}
+
+function ocultaMensagem() {
+    campoMensagem.style.display = "none";
 }
