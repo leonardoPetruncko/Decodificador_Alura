@@ -16,53 +16,54 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="Assets\images\logoAlura.png" alt="Logo da Alura">
-    </header>
+    <div class="box-degrade">
+        <header>
+            <img class="logo" src="Assets\images\logoAlura.png" alt="Logo da Alura">
+        </header>
 
-    <main class="container">
-        <section class="criptografia">
-            <textarea class="texto-entrada" placeholder="Digite seu texto"></textarea>
+        <main class="container">
+            <section class="criptografia">
+                <textarea class="texto-entrada" placeholder="Digite seu texto"></textarea>
 
-            <div class="info">
-                <img src="Assets\images\info.png" alt="!">
-                <p>Apenas letras minúsculas e sem acento.</p>
+                <div class="info">
+                    <img src="Assets\images\info.png" alt="!">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+
+                <div class="botoes">
+                    <button class="btn botao-encriptar" onclick="btnEncriptar()">Criptografar</button>
+                    <button class="btn botao-decriptar" onclick="btnDecriptar()">Descriptografar</button>
+                </div>
+            </section>
+
+            <section>
+                <div class="retangulo"></div>
+                <img class="boneco" src="Assets\images\fundoDecodificador.png"
+                    alt="Desenho de uma pessoa com uma lupa olhado um diamante.">
+                <div class="aviso">
+                    <h2>Nenhuma mensagem encontrada</h2>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="mensagem">
+                    <textarea class="texto-saida" id="texto-saida" cols="30" rows="10" readonly></textarea>
+                    <button class="btn botao-copiar" onclick="btnCopiar()">Copiar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="copyright">
+                <p>Desenvolvido por Leonardo Petruncko</p>
             </div>
 
-            <div class="botoes">
-                <button class="btn botao-encriptar" onclick="btnEncriptar()">Criptografar</button>
-                <button class="btn botao-decriptar" onclick="btnDecriptar()">Descriptografar</button>
+            <div class="links">
+                <a href="https://github.com/leonardoPetruncko" target="_blank">
+                    <a href="https://www.linkedin.com/in/leonardo-petruncko/" target="_blank">
             </div>
-        </section>
+        </footer>
 
-        <section>
-            <div class="retangulo"></div>
-            <img class="boneco" src="Assets\images\fundoDecodificador.png"
-                alt="Desenho de uma pessoa com uma lupa olhado um diamante.">
-            <div class="aviso">
-                <h2>Nenhuma mensagem encontrada</h2>
-                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-            </div>
-            <div class="mensagem">
-                <textarea class="texto-saida" id="texto-saida" cols="30" rows="10" readonly></textarea>
-                <button class="btn botao-copiar" onclick="btnCopiar()">Copiar</button>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="copyright">
-            <p>Desenvolvido por Leonardo Petruncko</p>
-        </div>
-
-        <div class="links">
-            <a href="https://github.com/leonardoPetruncko" target="_blank">
-                <a href="https://www.linkedin.com/in/leonardo-petruncko/" target="_blank">
-        </div>
-    </footer>
-
-    <script src="Assets\scripts\script.js"></script>
-
+        <script src="Assets\scripts\script.js"></script>
+    </div>
 </body>
 
 </html>

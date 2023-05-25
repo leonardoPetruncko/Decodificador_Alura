@@ -5,13 +5,24 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 150%;
-    color: #0A3871;
+    color: #6086f8;
 }
 
 body {
     height: 100vh;
     width: 100vw;
     background: #F3F5FC;
+}
+
+.box-degrade {
+    width: 100%;
+    padding: 300px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, blue, orangered, yellow);
+    background-size: 500% 100%;
+    animation: degrade-animado 5s infinite alternate;
 }
 
 .logo {
@@ -34,7 +45,11 @@ body {
 }
 
 .texto-entrada::placeholder {
-    color: #59BB64;
+    color: #f4f6f4;
+}
+
+.texto-entrada::content {
+    color: #ffffff;
 }
 
 .texto-entrada:focus {
@@ -48,7 +63,7 @@ body {
     padding: 0px;
     gap: 8px;
     font-size: 12px;
-    color: #495057;
+    color: #ffffff;
     line-height: 18px;
 
     position: absolute;
@@ -91,13 +106,13 @@ select:focus {
 .botao-encriptar {
     background: #59BB64;
     border: none;
-    color: white;
+    color: rgb(254, 254, 254);
 }
 
 .botao-decriptar {
-    background: #F3F5FC;
+    background: #fefefe63;
     border: 1px solid #59BB64;
-    color: #0A3871;
+    color: #010f21;
 }
 
 .retangulo {
@@ -107,9 +122,9 @@ select:focus {
     left: 1000px;
     top: 40px;
 
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 24px;
-    box-shadow: 0px 12px 16px -4px rgba(0, 0, 0.08);
+    box-shadow: 0px 12px 16px -4px rgb(18, 16, 166);
 }
 
 .boneco {
@@ -143,7 +158,7 @@ select:focus {
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    color: #59BB64;
+    color: #13c327;
 }
 
 .aviso p {
@@ -153,7 +168,7 @@ select:focus {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    color: #495057;
+    color: #13d526;
 }
 
 .mensagem {
@@ -201,4 +216,14 @@ select:focus {
 .footer a {
     font-size: 32px;
     color: inherit;
+}
+
+@keyframes degrade-animado {
+    0% {
+        background-position-x: 100%;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
 }
